@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>联盟目录查询</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="topbar">
+        <div>
+          <p class="eyebrow">Alliance directory</p>
+          <h1>联盟目录查询</h1>
+        </div>
+        <div class="source-pill is-hidden" id="sourceStatus" aria-live="polite"></div>
+      </section>
+
+      <nav class="page-nav" aria-label="页面导航">
+        <a class="nav-link active" href="index.html">联盟目录</a>
+        <a class="nav-link" href="sky.html">Sky兵工厂/堡垒</a>
+      </nav>
+
+      <section class="controls" aria-label="查询控制">
+        <label class="search-box">
+          <span>搜索</span>
+          <input
+            id="searchInput"
+            type="search"
+            autocomplete="off"
+            placeholder="输入联盟代号、联盟名、成员名或 ID"
+          >
+        </label>
+        <button class="ghost-button" id="clearButton" type="button" title="清空搜索">清空</button>
+      </section>
+
+      <section class="stats-grid" id="statsGrid" aria-label="统计信息"></section>
+
+      <section class="filter-row" id="filterRow" aria-label="联盟筛选"></section>
+
+      <section class="result-section">
+        <div class="result-heading">
+          <h2 id="resultTitle">联盟列表</h2>
+          <p id="resultMeta"></p>
+        </div>
+        <div class="status-line" id="statusLine" role="status"></div>
+        <div id="resultTable" class="result-table"></div>
+        <div id="resultList" class="result-list"></div>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
